@@ -929,7 +929,7 @@
 	</branchRateGradientWrtIncrements>
 
 	<paraphylyRateStatistic id="weightedParaphylyRateStatistic" weighting="byTime">
-		<!-- <fixedReferenceRates idref="fixedReferenceRates"/> -->
+	<treeModel idref="treeModel"/>
 		<arbitraryBranchRates idref="substBranchRates" />
 		<paraphylyList>
 			<taxa idref="equineClade"/>

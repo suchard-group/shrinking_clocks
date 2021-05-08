@@ -488,6 +488,21 @@
 		<randomLocalClockModel idref="branchRates" />
 	</treeLikelihood>
 
+	<rlcRatesWrapper id="rlcRates">
+		<randomLocalClockModel idref="branchRates" />
+	</rlcRatesWrapper>
+
+	<paraphylyRateStatistic id="weightedParaphylyRateStatistic" weighting="byTime">
+		<treeModel idref="treeModel" />
+		<rlcRatesWrapper idref="rlcRates" />
+		<paraphylyList>
+			<taxa idref="cladeA" />
+			<taxa idref="cladeB" />
+			<taxa idref="cladeC" />
+			<taxa idref="cladeD" />
+		</paraphylyList>
+	</paraphylyRateStatistic>
+
 	
 	<operators id="operators" optimizationSchedule="default">
 		<scaleOperator scaleFactor="0.75" weight="1">
@@ -624,6 +639,7 @@
 			<tmrcaStatistic idref="tmrca(cladeC)" />
 			<tmrcaStatistic idref="tmrca(cladeD)" />
 			<parameter idref="constant.popSize" />
+			<paraphylyRateStatistic idref="weightedParaphylyRateStatistic" />
 			<parameter idref="ac" />
 			<parameter idref="ag" />
 			<parameter idref="at" />
@@ -646,8 +662,8 @@
 				<treeModel idref="treeModel" />
 				<randomLocalClockModel idref="branchRates" />
 			</ratesFromBranchRateModel>
-
 		</log>
+
 
 		
 		

@@ -506,6 +506,7 @@
 	</branchRateGradientWrtIncrements>
 
 	<paraphylyRateStatistic id="weightedParaphylyRateStatistic" weighting="byTime">
+	<treeModel idref="treeModel"/>
 		<arbitraryBranchRates idref="substBranchRates" />
 		<paraphylyList>
 			<taxa idref="cladeA" />
@@ -520,9 +521,8 @@
 		<gammaPrior idref="globalScalePrior"/>
 	</bayesianBridgePriorSampler>
 
-	<incrementClassifier id="incrementClassifier" targetProbability="0.5">
+	<incrementClassifier id="incrementClassifier" bySign="true">
 		<autoCorrelatedRatesPrior idref="substBranchRatesPrior"/>
-		<bayesianBridgePriorSampler idref="bbPriorSampler"/>
 	</incrementClassifier>
 
 	<operators id="operators" optimizationSchedule="default">

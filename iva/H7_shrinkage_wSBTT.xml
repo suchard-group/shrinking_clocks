@@ -1276,6 +1276,7 @@
 	</arbitraryBranchRates>
 
 	<paraphylyRateStatistic id="weightedParaphylyRateStatistic" weighting="byTime">
+	<treeModel idref="treeModel"/>
 		<arbitraryBranchRates idref="substBranchRates"/>
 		<paraphylyList>
 			<taxa idref="equineClade"/>

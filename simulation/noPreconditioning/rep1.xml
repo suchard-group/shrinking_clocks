@@ -510,6 +510,7 @@
 	</branchRateGradientWrtIncrements>
 
 	<paraphylyRateStatistic id="weightedParaphylyRateStatistic" weighting="byTime">
+	<treeModel idref="treeModel" />
 		<arbitraryBranchRates idref="substBranchRates" />
 		<paraphylyList>
 			<taxa idref="cladeA" />
@@ -536,20 +537,13 @@
 		</bayesianBridgeGibbsOperator>
 
 
-		<!-- <hamiltonianMonteCarloOperator weight="5" nSteps="5" stepSize="1E-2" mode="vanilla" drawVariance="1.0" autoOptimize="true" gradientCheckCount="100" gradientCheckTolerance=".1">
-            <jointGradient>
-            	<branchRateGradientWrtIncrements idref="branchRateGradientWrtIncrements" />
-				<gradientWrtIncrements idref="incrementGradient" />
-            </jointGradient>
- 		</hamiltonianMonteCarloOperator> -->
+
 		 	<hamiltonianMonteCarloOperator weight="2" nSteps="5" stepSize="1E-2" mode="vanilla" drawVariance="1.0" autoOptimize="true" gradientCheckCount="100" gradientCheckTolerance=".1">
             <jointGradient>
             	<branchRateGradientWrtIncrements idref="branchRateGradientWrtIncrements" />
 				<gradientWrtIncrements idref="incrementGradient" />
             </jointGradient>
-			<!-- <preconditioner>
-				<bayesianBridgeDistribution idref="bbDistribution" />
-			</preconditioner> -->
+
  		</hamiltonianMonteCarloOperator>
 
 		<scaleOperator scaleFactor="0.75" weight="2">
